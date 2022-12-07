@@ -1,5 +1,5 @@
 async function commands (interaction) {
-    if (!interaction.isChatInputCommand()) return;
+    if (!interaction.isChatInputCommand()) return
 
     const command = interaction.client.commands.get(interaction.commandName);
 
