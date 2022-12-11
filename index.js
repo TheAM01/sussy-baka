@@ -2,7 +2,7 @@ import client from "./Main/client.js";
 import commandHandler from "./Main/handler.js";
 import server from "./Main/server.js";
 import fetch from "node-fetch";
-import ig from "./Functions/instagram.js";
+import ig from "./Functions/posts-moderation.js";
 import messageHandler from "./Main/messages.js";
 
 client.on('ready', (c) => {

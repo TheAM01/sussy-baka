@@ -1,4 +1,4 @@
-import instagram from "../Functions/instagram.js";
+import posts from "../Functions/posts-moderation.js";
 
 async function messageHandler (msg) {
 
@@ -6,8 +6,17 @@ async function messageHandler (msg) {
     if(content[content.length -1] === '.') return
 
     if (msg.content.toLowerCase().includes('instagram.com')) {
-        await instagram(content, msg)
+        await posts(content, msg, 'instagram')
     }
+
+    if (msg.content.toLowerCase().includes('twitter.com')) {
+        await posts(content, msg, 'twitter')
+    }
+
+    if (msg.content.toLowerCase().includes('reddit.com')) {
+        await posts(content, msg, 'reddit')
+    }
+
 }
 
 export default messageHandler
